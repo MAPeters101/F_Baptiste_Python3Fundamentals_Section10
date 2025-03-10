@@ -31,4 +31,23 @@ for i in range(100_000):
 end = perf_counter()
 elapsed_time = end - start
 print(elapsed_time)
+print('='*80)
+
+
+strings = 'Python is an awesome language'.split(' ')
+print(strings)
+filtered = []
+for item in strings:
+    if len(item) >= 5:
+        filtered.append(item)
+print(filtered)
+
+filtered = [item for item in strings if len(item) >= 5]
+print(filtered)
+
+
+
+
+
+
 

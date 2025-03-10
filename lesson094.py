@@ -44,8 +44,23 @@ print(filtered)
 
 filtered = [item for item in strings if len(item) >= 5]
 print(filtered)
+print('-'*80)
 
+sales = {
+    'widget 1': 0,
+    'widget 2': 5,
+    'widget 3': 10,
+    'widget 4': 2,
+}
 
+high_sales = []
+for key, value in sales.items():
+    if value >= 5:
+        high_sales.append(key)
+print(high_sales)
+high_sales = [key for key, value in sales.items() if value >= 5]
+print(high_sales)
+print('-'*80)
 
 
 

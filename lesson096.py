@@ -70,6 +70,11 @@ freq = {
 }
 print(freq)
 print()
+print('-'*80)
 
-
+from collections import Counter
+data = ['a', 'a', 'a', 'b', 'b', 'c', 'c', 'c', 'd' ]
+freq = Counter(data)
+print(freq)
+print(dict(freq))
 

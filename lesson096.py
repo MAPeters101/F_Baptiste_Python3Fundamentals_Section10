@@ -95,4 +95,23 @@ freq = Counter(paragraph.casefold())
 print(freq)
 freq = {key: value for key, value in freq.items() if key not in ignored}
 print(freq)
+print('-'*80)
+
+
+freq = {
+    key: value
+    for key, value in dict(Counter(paragraph.casefold())).items()
+    if key not in ignored
+}
+print(freq)
+print()
+
+freq = {
+    key: value
+    for key, value in Counter(paragraph.casefold()).items()
+    if key not in ignored
+}
+print(freq)
+print()
+
 

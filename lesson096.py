@@ -88,4 +88,11 @@ Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deseru
 mollit anim id est laborum."""
 freq = Counter(paragraph)
 print(dict(freq))
+print()
+
+ignored = " ,.\n"
+freq = Counter(paragraph.casefold())
+print(freq)
+freq = {key: value for key, value in freq.items() if key not in ignored}
+print(freq)
 

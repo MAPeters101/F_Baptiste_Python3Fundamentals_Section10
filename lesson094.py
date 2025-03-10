@@ -90,6 +90,15 @@ print(m)
 print('-'*80)
 
 
+m = [[0] * 3 for _ in range(3)]
+for row in range(3):
+    for col in range(3):
+        if row == col:
+            m[row][col] = 1
+print(m)
+print()
+m = [[1 if row == col else 0 for col in range(3)] for row in range(3)]
+print(m)
 
 
 

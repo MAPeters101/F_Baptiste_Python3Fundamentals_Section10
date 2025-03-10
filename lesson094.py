@@ -13,3 +13,22 @@ magnitudes = [sqrt(vector[0]**2 + vector[1]**2) for vector in vectors]
 print(magnitudes)
 print('-'*80)
 
+from time import perf_counter
+start = perf_counter()
+for i in range(100_000):
+    magnitudes = []
+    for vector in vectors:
+        magnitude = sqrt(vector[0] ** 2 + vector[1] ** 2)
+        magnitudes.append(magnitude)
+end = perf_counter()
+elapsed_time = end - start
+print(elapsed_time)
+print()
+
+start = perf_counter()
+for i in range(100_000):
+    magnitudes = [sqrt(vector[0] ** 2 + vector[1] ** 2) for vector in vectors]
+end = perf_counter()
+elapsed_time = end - start
+print(elapsed_time)
+

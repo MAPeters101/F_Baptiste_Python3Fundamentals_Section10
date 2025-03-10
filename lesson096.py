@@ -54,8 +54,11 @@ all_words = paragraph.split()
 print(all_words)
 words = {word.lower() for word in all_words if len(word) > 4}
 print(words)
+print('='*80)
 
-
-
-
-
+data = ['a', 'a', 'a', 'b', 'b', 'c', 'c', 'c', 'd' ]
+freq = {}
+for element in set(data):
+    count = len([char for char in data if char == element])
+    freq[element] = count
+print(freq)

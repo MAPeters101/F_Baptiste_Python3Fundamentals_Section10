@@ -10,3 +10,17 @@ for d in widget_sales:
     sales = d['sales']
     sales_by_widget[widget_name] = sales
 print(sales_by_widget)
+print()
+
+sales_by_widget = {}
+for d in widget_sales:
+    sales_by_widget[d['name']] = d['sales']
+print(sales_by_widget)
+print()
+
+sales_by_widget = {d['name']: d['sales'] for d in widget_sales}
+print(sales_by_widget)
+print()
+
+
+
